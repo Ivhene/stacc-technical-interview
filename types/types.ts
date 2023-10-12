@@ -1,6 +1,5 @@
 export type Goal = {
   goalID: number;
-  accountID: number;
   goalName: string;
   goalTarget: number;
 };
