@@ -22,7 +22,6 @@ export async function GET(
   }
 
   const matchingAccount = data.accounts.find((account: Account) => {
-    console.log(id + " vs " + account.accountID);
     return account.accountID === id;
   });
 
