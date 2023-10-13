@@ -1,8 +1,8 @@
-import { GetAccountParams } from "@/types/paramTypes";
+import { AccountIdParams } from "@/types/paramTypes";
 import { Account } from "@/types/types";
 import { NextResponse } from "next/server";
 
-export async function GET(request: Request, { params }: GetAccountParams) {
+export async function GET(request: Request, { params }: AccountIdParams) {
   const id = parseInt(params.id);
 
   const res = await fetch("http://localhost:3000/api/accounts");

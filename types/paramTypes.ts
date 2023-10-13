@@ -1,6 +1,6 @@
 import { Account } from "./types";
 
-export type GetAccountParams = {
+export type AccountIdParams = {
   params: { id: string };
 };
 
