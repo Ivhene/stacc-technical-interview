@@ -1,3 +1,7 @@
-export default async function ShowAccount() {
-  return <div>Show Account</div>;
+import { AccountIdParams } from "@/types/paramTypes";
+
+export default async function ShowAccount({ params }: AccountIdParams) {
+  const id = params.id;
+
+  return <div>{id}</div>;
 }
