@@ -1,3 +1,4 @@
+import AccountView from "@/components/showAccount/AccountView";
 import { AccountIdParams } from "@/types/paramTypes";
 
 export default async function ShowAccount({ params }: AccountIdParams) {
@@ -9,5 +10,5 @@ export default async function ShowAccount({ params }: AccountIdParams) {
 
   const account = await response.json();
 
-  return <div>{id}</div>;
+  return <AccountView />;
 }
