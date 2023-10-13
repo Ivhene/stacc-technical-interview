@@ -2,7 +2,7 @@ import AccountSelect from "@/components/AccountSelect";
 import Image from "next/image";
 
 export default async function Accounts() {
-  const res = await fetch("http://localhost:3000/api/accounts");
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/accounts`);
 
   if (!res.ok) {
     console.log("Fetch failed");
