@@ -1,3 +1,4 @@
+import AccountSelect from "@/components/AccountSelect";
 import Image from "next/image";
 
 export default async function Accounts() {
@@ -9,5 +10,5 @@ export default async function Accounts() {
 
   const data = await res.json();
 
-  return <div>Stacc interview</div>;
+  return <AccountSelect accounts={data.accounts} />;
 }
