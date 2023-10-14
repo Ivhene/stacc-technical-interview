@@ -15,4 +15,5 @@ export type ShowAccountParams = {
 export type UpcomingAndReachedParams = {
   upcoming: Goal[];
   reached: Goal[];
+  balance: number;
 };
