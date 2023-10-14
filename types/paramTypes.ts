@@ -7,3 +7,7 @@ export type AccountIdParams = {
 export type AccountSelectParams = {
   accounts: Account[];
 };
+
+export type ShowAccountParams = {
+  account: Account;
+};
