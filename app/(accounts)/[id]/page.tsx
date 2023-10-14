@@ -1,5 +1,6 @@
 import AccountView from "@/components/showAccount/AccountView";
 import { AccountIdParams } from "@/types/paramTypes";
+import { Account } from "@/types/types";
 
 export default async function ShowAccount({ params }: AccountIdParams) {
   const id = parseInt(params.id);
@@ -8,7 +9,7 @@ export default async function ShowAccount({ params }: AccountIdParams) {
     `${process.env.NEXT_PUBLIC_API_BASE_URL}/accounts/${id}`
   );
 
-  const account = await response.json();
+  const data = await response.json();
 
-  return <AccountView />;
+  return <AccountView account={data.account} />;
 }
