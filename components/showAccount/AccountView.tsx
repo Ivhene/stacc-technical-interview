@@ -44,6 +44,7 @@ export default function AccountView({ account }: ShowAccountParams) {
           <p>{account.accountName}</p>
           <p className="font-bold">{account.balance} kr</p>
         </div>
+        [nextMilestone &&{" "}
         <div className="bg-red-100 h-[70px] p-3 rounded-3xl flex flex-col justify-center items-center border-2 border-red-400  text-[12px]">
           <div className="flex flex-row justify-between w-full">
             <p>{`Next Milestone - ${nextMilestone?.goalTarget} kr`}</p>
@@ -54,16 +55,19 @@ export default function AccountView({ account }: ShowAccountParams) {
             className="bg-red-50 border-2 border-red-400"
           />
         </div>
-        <div className="bg-red-100 h-[70px] p-3 rounded-3xl flex flex-col justify-center items-center border-2 border-red-400  text-[12px]">
-          <div className="flex flex-row justify-between w-full">
-            <p>{`${nextGoal?.goalName} - ${nextGoal?.goalTarget} kr`}</p>
-            <p>{progressValueGoal.toFixed(1)}%</p>
+        ]
+        {nextGoal && (
+          <div className="bg-red-100 h-[70px] p-3 rounded-3xl flex flex-col justify-center items-center border-2 border-red-400  text-[12px]">
+            <div className="flex flex-row justify-between w-full">
+              <p>{`${nextGoal?.goalName} - ${nextGoal?.goalTarget} kr`}</p>
+              <p>{progressValueGoal.toFixed(1)}%</p>
+            </div>
+            <Progress
+              value={progressValueGoal}
+              className="bg-red-50 border-2 border-red-400"
+            />
           </div>
-          <Progress
-            value={progressValueGoal}
-            className="bg-red-50 border-2 border-red-400"
-          />
-        </div>
+        )}
       </div>
       <div className="bg-red-50 w-1/3 h-3/4 rounded-3xl p-10"></div>
     </div>
