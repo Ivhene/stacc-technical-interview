@@ -1,7 +1,6 @@
 "use client";
 import { ShowAccountParams } from "@/types/paramTypes";
 import { Progress } from "@/components/ui/progress";
-import { Goal } from "@/types/types";
 import { UpcomingAndReachedGoals } from "./UpcomingAndReachedGoals";
 
 export default function AccountView({ account }: ShowAccountParams) {
