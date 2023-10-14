@@ -2,6 +2,7 @@
 import { ShowAccountParams } from "@/types/paramTypes";
 import { Progress } from "@/components/ui/progress";
 import { Goal } from "@/types/types";
+import { UpcomingAndReachedGoals } from "./UpcomingAndReachedGoals";
 
 export default function AccountView({ account }: ShowAccountParams) {
   const nextMilestone = account.goals
@@ -44,18 +45,18 @@ export default function AccountView({ account }: ShowAccountParams) {
           <p>{account.accountName}</p>
           <p className="font-bold">{account.balance} kr</p>
         </div>
-        [nextMilestone &&{" "}
-        <div className="bg-red-100 h-[70px] p-3 rounded-3xl flex flex-col justify-center items-center border-2 border-red-400  text-[12px]">
-          <div className="flex flex-row justify-between w-full">
-            <p>{`Next Milestone - ${nextMilestone?.goalTarget} kr`}</p>
-            <p>{progressValueMilestone.toFixed(1)}%</p>
+        {nextMilestone && (
+          <div className="bg-red-100 h-[70px] p-3 rounded-3xl flex flex-col justify-center items-center border-2 border-red-400  text-[12px]">
+            <div className="flex flex-row justify-between w-full">
+              <p>{`Next Milestone - ${nextMilestone?.goalTarget} kr`}</p>
+              <p>{progressValueMilestone.toFixed(1)}%</p>
+            </div>
+            <Progress
+              value={progressValueMilestone}
+              className="bg-red-50 border-2 border-red-400"
+            />
           </div>
-          <Progress
-            value={progressValueMilestone}
-            className="bg-red-50 border-2 border-red-400"
-          />
-        </div>
-        ]
+        )}
         {nextGoal && (
           <div className="bg-red-100 h-[70px] p-3 rounded-3xl flex flex-col justify-center items-center border-2 border-red-400  text-[12px]">
             <div className="flex flex-row justify-between w-full">
@@ -69,7 +70,10 @@ export default function AccountView({ account }: ShowAccountParams) {
           </div>
         )}
       </div>
-      <div className="bg-red-50 w-1/3 h-3/4 rounded-3xl p-10"></div>
+      <UpcomingAndReachedGoals
+        reached={reachedGoals}
+        upcoming={remainingGoalsToReach}
+      />
     </div>
   );
 }
