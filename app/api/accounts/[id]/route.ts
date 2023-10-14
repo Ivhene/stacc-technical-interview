@@ -5,7 +5,7 @@ import { NextResponse } from "next/server";
 export async function GET(request: Request, { params }: AccountIdParams) {
   const id = parseInt(params.id);
 
-  const res = await fetch("http://localhost:3000/api/accounts");
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/accounts`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
