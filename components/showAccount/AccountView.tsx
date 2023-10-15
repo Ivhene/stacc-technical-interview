@@ -40,7 +40,7 @@ export default function AccountView({ account }: ShowAccountParams) {
 
   return (
     <div className="fixed inset-0 bg-red-100 flex flex-col md:flex-row items-center justify-center md:space-x-2 text-[14px] p-7 md:p-0 space-y-2">
-      <div className="bg-red-50 h-1/2 lg:w-1/3 xl:w-1/4 2xl:w-1/5 md:w-2/5 md:h-3/4 rounded-3xl p-10 flex flex-col space-y-4 overflow-auto">
+      <div className="bg-red-50 h-1/2 lg:w-1/3 xl:w-1/4 md:w-2/5 md:h-3/4 rounded-3xl p-10 flex flex-col space-y-4 overflow-auto">
         <div className="bg-red-100 h-[100px] p-5 rounded-3xl flex flex-col justify-center items-center space-y-4 border-2 border-red-400">
           <p>{account.accountName}</p>
           <p className="font-bold">{account.balance} kr</p>

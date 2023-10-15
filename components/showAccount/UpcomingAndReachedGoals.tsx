@@ -55,7 +55,7 @@ export function UpcomingAndReachedGoals({
       });
 
   return (
-    <div className="bg-red-50 h-1/2 xl:w-1/4 2xl:w-1/5 lg:w-1/3 md:w-2/5 md:h-3/4 rounded-3xl p-10 flex flex-col space-y-4 overflow-auto">
+    <div className="bg-red-50 h-1/2 xl:w-1/4 lg:w-1/3 md:w-2/5 md:h-3/4 rounded-3xl p-10 flex flex-col space-y-4 overflow-auto">
       {upcomingDisplay()}
       {reachedDisplay()}
     </div>
