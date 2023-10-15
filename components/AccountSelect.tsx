@@ -4,10 +4,15 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function AccountSelect({ accounts }: AccountSelectParams) {
+  console.log("Accounts Select Reached");
   const showAccounts = () => {
     return accounts.map((account) => {
       return (
-        <Link key={account.accountID} href={`/${account.accountID}`}>
+        <Link
+          key={account.accountID}
+          href={`/${account.accountID}`}
+          onClick={() => console.log("click")}
+        >
           <div className="h-[100px] rounded-3xl text-center bg-amber-100 border border-amber-400">
             <p>{account.accountID}</p>
             <p>{account.accountName}</p>

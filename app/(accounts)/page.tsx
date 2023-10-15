@@ -10,5 +10,7 @@ export default async function Accounts() {
 
   const data = await res.json();
 
+  console.log(data.accounts);
+
   return <AccountSelect accounts={data.accounts} />;
 }
