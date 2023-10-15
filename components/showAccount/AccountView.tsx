@@ -5,7 +5,8 @@ import { UpcomingAndReachedGoals } from "./UpcomingAndReachedGoals";
 
 export default function AccountView({ account }: ShowAccountParams) {
   const nextMilestone = account.goals
-    .sort((a, b) => a.goalID - b.goalID)
+    .filter((goal) => goal.goalID < 10)
+    .sort((a, b) => a.goalTarget - b.goalTarget)
     .find((goal) => goal.goalTarget > account.balance);
 
   const nextGoal = account.goals
