@@ -4,6 +4,8 @@ This repository contains the code I have used to solve the task given by Stacc a
 ## Task description
 In this task, I have attempted encourage saving by adding milestones that can be reached. The original plan was to have the page change color based on which milestone you were at, however that eventually had to be scrapped (more on this under comments). In this current solution, you will start with a page showing a list of the existing accounts. Once you pick an account, you will be sent to that accounts page, which shows the amount of money it has in its balance, as well as the current progress towards the upcoming milestones and personally added goals, with the upcoming milestone and next personal goal grouped with the account info, while the rest of the goals and milestones are in another box that can be scrolled through. The application can used on all devices. 
 
+The application contains a Next JS api, and a Next JS frontend which uses data stored in the api. 
+
 ## How to run
 If you want to run this project on your own computer, you have to do the following
  1. Clone this repository
