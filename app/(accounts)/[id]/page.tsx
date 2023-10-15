@@ -14,6 +14,8 @@ export default async function ShowAccount({ params }: AccountIdParams) {
 
   const id = parseInt(params.id);
 
+  console.log(params.id);
+
   const data = await getData(id);
 
   return <AccountView account={data.account} />;
