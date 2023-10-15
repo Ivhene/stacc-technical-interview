@@ -3,7 +3,8 @@ import { AccountIdParams } from "@/types/paramTypes";
 
 async function getData(id: number) {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/accounts/${id}`
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}/accounts/${id}`,
+    { next: { revalidate: 3000 } }
   );
 
   return await response.json();
