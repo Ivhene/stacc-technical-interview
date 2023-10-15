@@ -12,7 +12,10 @@ export function UpcomingAndReachedGoals({
       .map((goal) => {
         const progressValue = (balance / goal.goalTarget) * 100;
         return (
-          <div className="bg-red-100 h-[70px] p-3 rounded-3xl flex flex-col justify-center items-center border-2 border-red-400  text-[12px]">
+          <div
+            key={goal.goalID}
+            className="bg-red-100 h-[70px] p-3 rounded-3xl flex flex-col justify-center items-center border-2 border-red-400  text-[12px]"
+          >
             <div className="flex flex-row justify-between w-full">
               <p>{`${goal.goalName} - ${goal.goalTarget} kr`}</p>
               <p>{progressValue.toFixed(1)}%</p>
@@ -31,7 +34,10 @@ export function UpcomingAndReachedGoals({
       .map((goal) => {
         const progressValue = (balance / goal.goalTarget) * 100;
         return (
-          <div className="bg-red-100 h-[70px] p-3 rounded-3xl flex flex-col justify-center items-center border-2 border-red-400  text-[12px]">
+          <div
+            key={goal.goalID}
+            className="bg-red-100 h-[70px] p-3 rounded-3xl flex flex-col justify-center items-center border-2 border-red-400  text-[12px]"
+          >
             <div className="flex flex-row justify-between w-full">
               <p>{`${goal.goalName} - ${goal.goalTarget} kr`}</p>
               <p>{`${
