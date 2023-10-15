@@ -153,7 +153,7 @@ let accounts: Account[] = [
       },
       {
         goalID: 102,
-        goalName: "*Washing machine",
+        goalName: "Washing machine",
         goalTarget: 7916.0,
       },
     ],
