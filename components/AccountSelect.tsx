@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function AccountSelect({ accounts }: AccountSelectParams) {
-  console.log("Accounts Select Reached");
   const showAccounts = () => {
     return accounts.map((account) => {
       return (

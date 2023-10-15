@@ -10,11 +10,7 @@ async function getData(id: number) {
 }
 
 export default async function ShowAccount({ params }: AccountIdParams) {
-  console.log("New Page Reached");
-
   const id = parseInt(params.id);
-
-  console.log(params.id);
 
   const data = await getData(id);
 
