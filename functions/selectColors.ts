@@ -50,4 +50,6 @@ export function selectColors(balance: number) {
       borderAndCosmetic = "#D7A5FF";
       break;
   }
+
+  return { bodyAndBox, contentAndCosmetic, borderAndCosmetic };
 }
