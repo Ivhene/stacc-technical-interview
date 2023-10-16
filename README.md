@@ -10,7 +10,7 @@ The application contains a Next JS api, and a Next JS frontend which uses data s
 If you want to run this project on your own computer, you have to do the following
  1. Clone this repository
  2. Enter the repository and use "npm install" (alternatively replace npm with the correct keyword for your system) to install all packages, dependencies and libraries
- 3. create a .env file and add a variable NEXT_PUBLIC_API_BASE_URL = "http://localhost:3000/api
+ 3. create a .env file and add a variable NEXT_PUBLIC_API_BASE_URL=http://localhost:3000/api
  4. Use "npm run build" to create a runnable build for the project
  5. Now use "npm run start" to run the build you created in the previous step
  6. Navigate to localhost:3000 to load the page
