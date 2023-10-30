@@ -1,55 +1,65 @@
 export function selectColors(balance: number) {
-  let bodyAndBox: string;
-  let contentAndCosmetic: string;
-  let borderAndCosmetic: string;
+  let backgroundLight: string;
+  let backgroundNeutral: string;
+  let backgroundStrong: string;
+  let border: string;
 
   switch (true) {
     case balance < 5000:
-      bodyAndBox = "#FFDFDF";
-      contentAndCosmetic = "#FFEFEF";
-      borderAndCosmetic = "#FF7E7E";
+      backgroundNeutral = "bg-[#FFDFDF]";
+      backgroundLight = "bg-[#FFEFEF]";
+      backgroundStrong = "bg-[#FF7E7E]";
+      border = "bg-[#FF7E7E]";
       break;
     case balance < 10000:
-      bodyAndBox = "#FFE9D6";
-      contentAndCosmetic = "#FCF5F0";
-      borderAndCosmetic = "#FFB571";
+      backgroundNeutral = "bg-[#FFE9D6]";
+      backgroundLight = "bg-[#FCF5F0]";
+      backgroundStrong = "bg-[#FFB571]";
+      border = "bg-[#FF7E7E]";
       break;
     case balance < 15000:
-      bodyAndBox = "#FFF7B0";
-      contentAndCosmetic = "#FEF8E5";
-      borderAndCosmetic = "#FFEE57";
+      backgroundNeutral = "bg-[#FFF7B0]";
+      backgroundLight = "bg-[#FEF8E5]";
+      backgroundStrong = "bg-[#FFEE57]";
+      border = "bg-[#FF7E7E]";
       break;
     case balance < 25000:
-      bodyAndBox = "#EDFFC5";
-      contentAndCosmetic = "#F9FFED";
-      borderAndCosmetic = "#D8FF6A";
+      backgroundNeutral = "bg-[#EDFFC5]";
+      backgroundLight = "bg-[#F9FFED]";
+      backgroundStrong = "bg-[#D8FF6A]";
+      border = "bg-[#FF7E7E]";
       break;
     case balance < 50000:
-      bodyAndBox = "#E2FFDB";
-      contentAndCosmetic = "#EDFEE5";
-      borderAndCosmetic = "#9EFF7C";
+      backgroundNeutral = "bg-[#E2FFDB]";
+      backgroundLight = "bg-[#EDFEE5]";
+      backgroundStrong = "bg-[#9EFF7C]";
+      border = "bg-[#FF7E7E]";
       break;
     case balance < 100000:
-      bodyAndBox = "#D6FFFF";
-      contentAndCosmetic = "#EEFFFB";
-      borderAndCosmetic = "#91FFF2";
+      backgroundNeutral = "bg-[#D6FFFF]";
+      backgroundLight = "bg-[#EEFFFB]";
+      backgroundStrong = "bg-[#91FFF2]";
+      border = "bg-[#FF7E7E]";
       break;
     case balance < 250000:
-      bodyAndBox = "#D7FFE9";
-      contentAndCosmetic = "#E9FFF0";
-      borderAndCosmetic = "#99FFCE";
+      backgroundNeutral = "bg-[#D7FFE9]";
+      backgroundLight = "bg-[#E9FFF0]";
+      backgroundStrong = "bg-[#99FFCE]";
+      border = "bg-[#FF7E7E]";
       break;
     case balance < 500000:
-      bodyAndBox = "#DBEAFF";
-      contentAndCosmetic = "#EEF6FF";
-      borderAndCosmetic = "#A0D2FF";
+      backgroundNeutral = "bg-[#DBEAFF]";
+      backgroundLight = "bg-[#EEF6FF]";
+      backgroundStrong = "bg-[#A0D2FF]";
+      border = "bg-[#FF7E7E]";
       break;
     default:
-      bodyAndBox = "#F6DBFD";
-      contentAndCosmetic = "#FFF2FE";
-      borderAndCosmetic = "#D7A5FF";
+      backgroundNeutral = "bg-[#F6DBFD]";
+      backgroundLight = "bg-[#FFF2FE]";
+      backgroundStrong = "bg-[#D7A5FF]";
+      border = "bg-[#FF7E7E]";
       break;
   }
 
-  return { bodyAndBox, contentAndCosmetic, borderAndCosmetic };
+  return { backgroundNeutral, backgroundLight, backgroundStrong, border };
 }
